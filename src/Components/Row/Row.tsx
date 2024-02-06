@@ -11,7 +11,7 @@ function Row({ nutrient, amount, difference }: RowProps) {
         <>
             <p className="nutrient">{nutrient}</p>
             <p className="amount">{amount}</p>
-            <p className="difference"> {difference && difference >= 0 ? "+" : null}        {difference}</p>
+            <p className="difference"> {difference ? (difference > 0 ? `+ ${Math.abs(difference)}` : `- ${Math.abs(difference)}`): null}</p>
         </>
     )
 }
