@@ -1,0 +1,41 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, fit-content);
+  height: fit-content;
+  margin: 2rem;
+  padding: 0.5rem;
+  border-radius:4px;
+  border: 1px solid rgb(138, 137, 137);
+  font-size: 18px;
+  h1 {
+    grid-column: 1/4;
+    margin: 0;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 40px;
+  }
+  p{
+    margin: 0;
+    padding: 2px 7px;
+    border-top: 1px solid black;
+  }
+  .nutrient {
+    grid-column: 1;
+  }
+  .amount {
+    grid-column: 2;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .difference {
+    color: red;
+  }
+  .headers{
+    border-top: none;
+    font-weight: bold;
+  }
+  .header-amount {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+}
