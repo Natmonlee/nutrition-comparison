@@ -11,26 +11,26 @@ type CardProps = {
 function Card({ food, otherFood }: CardProps) {
   const rowsToAdd: React.ReactNode[] = [];
   const nutrientNames: string[] = [
-    "weight",
-    "calories",
-    "kilojoules",
-    "protein",
-    "carbohydrates",
-    "sugar",
-    "fibre",
-    "fat",
-    "calcium",
-    "iron",
-    "sodium",
-    "potassium",
-    "magnesium",
-    "phosphorus",
-    "vitaminA",
-    "betaCarotene",
-    "lycopene",
-    "folate",
-    "vitaminC",
-    "vitaminB12"
+    "Weight_g",
+    "Energy_kcal",
+    "Energy_kj",
+    "Protein_g",
+    "Carbohydrate_g",
+    "TotalSugar_g",
+    "TotalDietaryFibre_g",
+    "TotalFat_g",
+    "Calcium_mg",
+    "Iron_mg",
+    "Sodium_mg",
+    "Potassium_mg",
+    "Magnesium_mg",
+    "Phosphorus_mg",
+    "VitaminARAE",
+    "BetaCarotene_mcg",
+    "Lycopene_mcg",
+    "FolateDFE",
+    "VitaminC_mg",
+    "VitaminB12_mcg"
   ];
 
   const nutrientNamesFormatted: string[] = [
@@ -58,8 +58,8 @@ function Card({ food, otherFood }: CardProps) {
 
   for (const nutrientName of nutrientNames) {
     let difference;
+    const foodValue = food[nutrientName];
     if (otherFood) {
-      const foodValue = food[nutrientName];
       const otherFoodValue = otherFood[nutrientName];
   
       if (Number(foodValue) && Number(otherFoodValue)) {
@@ -77,11 +77,10 @@ function Card({ food, otherFood }: CardProps) {
       difference = null;
   }
 
-
     rowsToAdd.push(
       <Row
         nutrient={nutrientNamesFormatted[nutrientNames.indexOf(nutrientName)]}
-        amount={food[nutrientName]}
+        amount={foodValue ? foodValue: null}
         key={food.name + nutrientName}
         difference={
           difference
@@ -92,7 +91,7 @@ function Card({ food, otherFood }: CardProps) {
 
   return (
     <div className="card" style={{ backgroundColor: food.color }}>
-      <h1>{food.name}</h1>
+      <h1>{food.FoodName} <br/> {food.Measure}</h1>
       <p className="headers">Nutrient</p>
       <p className="headers header-amount">Amount</p>{" "}
       <p className="headers">Difference</p>

@@ -2,7 +2,7 @@ import React from "react";
 
 type RowProps = {
     nutrient: string,
-    amount: string,
+    amount: string | null,
     difference: number | null
 };
 
