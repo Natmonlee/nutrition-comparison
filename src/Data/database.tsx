@@ -1,10 +1,14 @@
-import Vegetable from "../Classes-and-Types/Vegetable.tsx";
+// import Food from "../Classes-and-Types/Food.tsx";
 
-const vegData = {
-  carrot: new Vegetable("Carrot", "orange", {"Calories (kcal)": 10, "Fibre (g)": 5, "Protein (g)": 0.4, "Vitamin C (mg)": 40}),
-  aubergine: new Vegetable("Aubergine", "purple", {"Calories (kcal)": 20, "Fibre (g)": 10, "Protein (g)": 0.2, "Vitamin C (mg)": 20}),
-  potato: new Vegetable("Potato", "beige", {"Calories (kcal)": 30, "Fibre (g)": 15, "Protein (g)": 0.6, "Vitamin C (mg)": 50}),
-};
+// // const nut = new Nutrition("1","5","3","7","8","9","3","tr","2","6","5","7","8","9","3","5","tr","7","4","2");
+// // const nut2 = new Nutrition("tr","5","3","7","4","0.5","tr","tr","2","6","5","7","18","9","3","5","6","7","4","2");
+// // const nut3 = new Nutrition("8","5","3","7","8","9","3","4","2","6","5","7","8","9","3","5","6","7","4","2");
 
-export default vegData;
+// // const vegData = {
+// //   carrot: new Food("Carrot", "One large" , nut,"orange"),
+// //   aubergine: new Food("Aubergine", "Half" , nut2,"purple"),
+// //   potato: new Food("Potato", "One jacket" , nut3,"beige"),
+// // };
+
+// // export default vegData;
 
